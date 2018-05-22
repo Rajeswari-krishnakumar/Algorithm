@@ -1,0 +1,29 @@
+<!-- for each element find appropriate position by finding the min of remaining array. -->
+<html>
+	<head>
+		<script type="text/javascript">
+			var a=[2,5,4,1,3]
+			function selectionSort(arr){
+				let min=Number.MAX_VALUE;
+				let minIdex
+				let len = arr.length;
+				let i,j;
+				for(let i =0;i<len;i++){
+					min = Number.MAX_VALUE;
+					for(j=i;j<len;j++){
+						if(a[j]<min){
+							min = a[j];
+							minIdex = j;
+						}
+					}
+					//swap 
+					[a[minIdex],a[i]]=[a[i],a[minIdex]];
+				
+
+				}
+				return arr;
+			}
+			console.log(selectionSort(a));
+		</script>
+	</head>
+</html>

@@ -1,0 +1,24 @@
+<!-- Take each element from second element and check with previous element and find a position for the new element such that its smaller that all the element on the right side. Keep going backward when the element is smaller -->
+<html>
+	<head>
+		<script type="text/javascript">
+			var a=[2,5,4,1,3]
+			function insertionSort(arr){
+				let length = arr.length;
+				let i=0,j=0;
+				for(i=1;i<length;i++){
+					j=i-1;
+					newElement = a[i];
+					while(j>=0 && newElement<a[j]){
+						a[j+1]=a[j];
+						j--;
+					}
+					a[j+1]=newElement;
+				}
+				return arr;
+			}
+			console.log(insertionSort(a));
+
+		</script>
+	</head>
+</html>
