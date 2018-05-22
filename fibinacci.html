@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			var fibN;
+			function fib(n){
+				if(n === 0){
+					return 0;
+				}
+				if(n === 1){
+					return 1;
+				}
+				fibN = fib(n-2)+fib(n-1);
+				return fibN;
+			}
+			console.log(fib(8));
+
+		</script>
+	</head>
+</html>
